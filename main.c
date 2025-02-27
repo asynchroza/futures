@@ -1,3 +1,13 @@
+/**
+ * This is an extremely convoluted example of a future?
+ * Goal is to get a better grasp of C and how futures
+ * work.
+ *
+ * Each future task is spinning up a new phthread.
+ *
+ * TODO: Understand cost of phthread creation
+ */
+
 #include <pthread.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -14,6 +24,7 @@ struct Future {
   char *errorMsg; // TODO: Why should this be at the end of the struct?
 };
 
+// LOL: Don't pass the future as an argument to the function??
 struct WriteToFileArgs {
   int timeout;
   struct Future *future;
